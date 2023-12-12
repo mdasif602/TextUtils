@@ -1,15 +1,15 @@
 import './App.css';
-// import About from './Components/About';
+import About from './Components/About';
 import Navbar from './Components/Navbar';
 import TextForm from './Components/TextForm';
 import React, { useState} from 'react';
 import Alert from './Components/Alert';
-// import NoPage from './Components/NoPage';
-// import {
-//   BrowserRouter,
-//   Routes,
-//   Route
-// } from "react-router-dom";
+import NoPage from './Components/NoPage';
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
 
 // let name = "asif";
 // function App() {
@@ -109,21 +109,21 @@ function App() {
 
   return(
     <>
-    {/* <BrowserRouter> */}
+    <BrowserRouter>
       <Navbar title = "TextUtils" aboutText = "About Us" mode = {mode} toggleMode = {toggleMode} textMode = {textMode} text = {text} navColor = {navColor} textColor = {textColor} blueToggle = {blueToggle} redToggle = {redToggle} greenToggle = {greenToggle}/>
       {/* <Navbar/> */}
       <Alert alert = {alert}/>
       <div className="container my-3">
-        {/* <Routes> */}
-              {/* <Route path="/about" element={<About />}>
+        <Routes>
+              <Route path="/about" element={<About mode = {mode}/>}>
               </Route>
               <Route path="/" element={<TextForm showAlert = {showAlert} btnColor = {btnColor} heading = "Enter the text to Analyze" textMode = {textMode}/>}>
               </Route>
-              <Route path="*" element={<NoPage />} /> */}
-        {/* </Routes> */}
-          <TextForm showAlert = {showAlert} btnColor = {btnColor} heading = "Enter the text to Analyze" textMode = {textMode}/>
+              <Route path="*" element={<NoPage />} />
+        </Routes>
+          {/* <TextForm showAlert = {showAlert} btnColor = {btnColor} heading = "Enter the text to Analyze" textMode = {textMode}/> */}
       </div>
-    {/* </BrowserRouter> */}
+    </BrowserRouter>
     </>
   )
 }

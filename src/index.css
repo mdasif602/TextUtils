@@ -7,3 +7,7 @@
     border-radius: 5px;
     /* width: 50px; */
   }
+
+.accordion-button::after {
+  filter: invert(1);
+}
